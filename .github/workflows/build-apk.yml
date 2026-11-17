@@ -1,3 +1,4 @@
+
 name: Build BASTARD APK
 
 on:
@@ -19,7 +20,7 @@ jobs:
       - name: Extract project
         run: |
           unzip BASTARD-Android-chat-backend-source.zip
-          cd BASTARD-Android-chat-backend-source/BASTARD-android
+          cd BASTARD-Android-chat-backend-source/BASTARD-Android
           echo "PROJECT_DIR=$PWD" >> $GITHUB_ENV
 
       - name: Set up Java
@@ -52,4 +53,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: BASTARD-APK
-          path: BASTARD-Android-chat-backend-source/BASTARD-android/app/build/outputs/apk/debug/app-debug.apk
+          path: BASTARD-Android-chat-backend-source/BASTARD-Android/app/build/outputs/apk/debug/app-debug.apk
